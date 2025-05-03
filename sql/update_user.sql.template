@@ -1,0 +1,10 @@
+-- sql/update_user.sql.template
+-- Template for updating an existing user
+UPDATE users 
+SET
+    role = '${role}',
+    ${password_set}
+    ${email_set}
+    is_active = ${is_active}
+WHERE
+    username = '${username}';

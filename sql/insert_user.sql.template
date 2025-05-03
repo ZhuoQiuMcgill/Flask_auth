@@ -1,0 +1,5 @@
+-- sql/insert_user.sql.template
+-- Template for inserting a new user
+INSERT INTO users (username, password_hash, role, creation_method, email)
+VALUES
+    ('${username}', '${password_hash}', '${role}', '${creation_method}', ${email});
