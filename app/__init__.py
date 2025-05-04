@@ -4,10 +4,19 @@ Flask Auth Service API - Application Factory.
 This module initializes the Flask application and its extensions.
 """
 
+import os
 from flask import Flask
 from app.config import config
 from app.models import db
 from app.database import init_app as init_db_app
+
+# Try to load .env file if python-dotenv is installed
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    # python-dotenv not installed, continue without it
+    pass
 
 
 def create_app(config_name='default'):

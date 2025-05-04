@@ -7,7 +7,7 @@ This script is the entry point for running the application.
 import os
 from app import create_app
 
-# Get environment configuration
+# Get environment configuration, default to development
 env = os.environ.get('FLASK_ENV', 'development')
 
 # Create app with appropriate configuration
