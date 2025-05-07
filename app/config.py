@@ -10,11 +10,13 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+
 def get_absolute_db_path(db_path):
     """Convert database path to absolute path if it's not already absolute."""
     if not os.path.isabs(db_path):
         return os.path.abspath(db_path)
     return db_path
+
 
 class Config:
     """Base configuration class."""

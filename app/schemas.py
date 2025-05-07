@@ -6,6 +6,7 @@ This module defines Marshmallow schemas for request/response validation and seri
 
 from marshmallow import Schema, fields, validate, ValidationError
 
+
 class RegisterSchema(Schema):
     """Schema for user registration."""
     username = fields.Str(
@@ -21,6 +22,7 @@ class RegisterSchema(Schema):
     )
     email = fields.Email(required=False)
 
+
 class LoginSchema(Schema):
     """Schema for user login."""
     identifier = fields.Str(
@@ -31,6 +33,7 @@ class LoginSchema(Schema):
         required=True,
         error_messages={"required": "Password is required."}
     )
+
 
 class UserSchema(Schema):
     """Schema for user response."""
